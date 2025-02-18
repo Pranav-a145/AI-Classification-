@@ -24,4 +24,25 @@ The models were evaluated based on accuracy across different training data fract
 - Predicts using **maximum likelihood estimation**.
 
 ### **Perceptron Classifier**
-- Maintains weight vectors for each c
+- Maintains weight vectors for each class.
+- Uses an iterative learning process with **stochastic updates**.
+- Updates weights when a misclassification occurs.
+
+## Key Results
+- **Digit Classification**:
+  - Naive Bayes achieved **77% accuracy**, while Perceptron performed slightly better with **81% accuracy** at full training data.
+- **Face Classification**:
+  - Naive Bayes outperformed Perceptron, reaching **90.7% accuracy** compared to **86.8%** for Perceptron.
+- **More training data improved accuracy**, and Perceptron exhibited higher variance in small data scenarios.
+
+## Lessons Learned
+- **Naive Bayes performs well when features are conditionally independent**, as seen in face classification.
+- **Perceptron benefits from larger datasets**, surpassing Naive Bayes in multi-class digit recognition.
+- **Binary feature extraction** is a simple yet effective preprocessing step.
+- **Randomized trials capture model variance**, especially with small datasets.
+
+## Running the Project
+Ensure the dataset is in the correct directory structure and run:
+
+```bash
+python faceDigitClassification.py
